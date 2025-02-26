@@ -7,18 +7,31 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const imageFilenames = [
-        "pig.png", "ghast.png", "chicken.png", "sheep.png", "image5.jpg", 
-        "image6.jpg", "image7.jpg", "image8.jpg", "image9.jpg", "image10.jpg", 
-        "image11.jpg", "image12.jpg", "image13.jpg", "image14.jpg", "image15.jpg"
+    const mobImages = [
+        "pig.png",        // Porkchop  
+        "ghast.png",      // Ghast Tear  
+        "chicken.png",    // Feather  
+        "sheep.png",      // Wool  
+        "creeper.png",    // Gunpowder  
+        "enderman.png",   // Ender Pearl  
+        "zombie.png",     // Rotten Flesh  
+        "skeleton.png",   // Bones  
+        "spider.png",     // String  
+        "slime.png",      // Slimeball  
+        "blaze.png",      // Blaze Rod  
+        "witch.png",      // Random Potions  
+        "cow.png",        // Leather 
+        "fish.png",       // Fish
+        "squid.png"       // Ink sack
     ];
+    
 
     function getRandomImages(num) {
         const selectedIndexes = [];
         
         // Keep generating random numbers until we have 5 unique ones
         while (selectedIndexes.length < num) {
-            const randomIndex = Math.floor(Math.random() * imageFilenames.length);
+            const randomIndex = Math.floor(Math.random() * mobImages.length);
             
             // Check if the number is already selected
             if (!selectedIndexes.includes(randomIndex)) {
@@ -38,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Insert images into the container based on the random indexes
     randomIndexes.forEach(index => {
         const imgElement = document.createElement("img");
-        imgElement.src = `images/${imageFilenames[index]}`;  // Image file path
+        imgElement.src = `images/${mobImages[index]}`;  // Image file path
         imgElement.alt = `Animal ${index + 1}`;  // Alt text for accessibility
         imgElement.classList.add("game-animal");  // Add class for styling
 

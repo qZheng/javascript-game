@@ -14,22 +14,42 @@ Users can spend coins to collect animals in the bottom of the page.
 
 <body>
     <h1 id="title">Minecraft Animal Sound Game</h1>
+    
+    <div id="help-container">
+        <button id="help-button">Help ❓</button>
+        <div id="help-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>How to Play</h2>
+                <p>1. Look at the item displayed above the mobs.</p>
+                <p>2. Click on the mob that drops this item in Minecraft.</p>
+                <p>3. Earn a coin for each correct answer.</p>
+                <p>4. The game ends after 5 rounds.</p>
+                <p>5. Try to get the highest score possible!</p>
+            </div>
+        </div>
+    </div>
 
     <div id="game-container">
-        <h2>Which mob drops this?</h2>
-            <a id="play-sound">Play Sound 🔊</a>
+        <h2>Which mob drops this item?</h2>
+        <div id="game-info">
+            <span>Round: <span id="round-count">1</span>/5</span>
+        </div>
+        <div class="drop-container">
+            <!-- Drop picture -->
+        </div>
         <div class="choice-container">
-            <!-- The game elements will be added here via JavaScript -->
+            <!-- Mob choices pictures -->
         </div>
     </div>
 
     </div>
 
     <div id="shop">
-        <h2>Animal Collection</h2>
-        <p>Coins: <span id="coin-count">0</span></p>
+        <h2>Total Coins</h2>
+        <p><span id="coin-count">0</span></p>
         <div id="animal-collection">
-            <!-- Purchased animals will be displayed here -->
+            <!-- Purchased animals will be displayed here (not implemented) -->
         </div>
     </div>
     <script src="js/script.js"></script>
